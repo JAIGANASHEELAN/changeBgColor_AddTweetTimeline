@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changing colors AND Tweet Your comments</title>
+    
+</head>
+<body>
+    <center>
+        <main>
+            <h1>hello Welcome! </h1>
+            <button id="but" >Change ME!</button>
+            <br><br><hr><br>
+    
+            <form action="#" id="tweetForm" >
+                <input type="text" name="user" placeholder="username" ><br><br>
+                <input type="text" name="tweet" placeholder="Comment" ><br><br>
+                <button>Post Tweet</button><br>
+            </form><br><br>
+            <ul id="link" >
+
+            </ul>
+        </main>
+    
+    </center>
+    
+
+
+
+
+    <script src="tweetDisplay.js"></script>
+    <!-- JavaScript foe chnaging backgorund color -->
+    <script>
+        const button = document.querySelector('button');
+        const hed= document.querySelector('h1');
+        button.addEventListener('click', function  () {
+            // const boddy= document.querySelector("body");
+            const newCol=makeRandCol() ;
+            document.body.style.backgroundColor= newCol;
+            hed.innerText = newCol;
+        })
+        const makeRandCol= () =>{
+            const r= Math.floor(Math.random() * 255);
+            const g= Math.floor(Math.random() * 255);
+            const b= Math.floor(Math.random() * 255);
+            return randCol= `rgb(${r}, ${g}, ${b})`;
+
+        }
+    </script>
+</body>
+</html>
